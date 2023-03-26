@@ -12,7 +12,7 @@ import './assets/style/base.css'
 
 const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-    app.component(key === "Menu" ? "ownMenu" : key, component)
+    app.component(key, component)
 }
 
 app

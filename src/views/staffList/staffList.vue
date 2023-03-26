@@ -8,7 +8,6 @@
 import sslcTable from "@components/table/table.vue"
 import { getStaffList, reviseStaff, delStaff } from "@api/staff/staff"
 import { reactive } from "vue";
-import _ from "lodash"
 const sexValues = [
     {
         id: 1,

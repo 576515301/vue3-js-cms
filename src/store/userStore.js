@@ -22,12 +22,10 @@ export const useUser = defineStore("user", {
             return new Promise((resolve, reject) => {
                 getUserInfo().then(res => {
                     this.userInfo = res;
-                    // 是否使用本地路由(开始)
-                    let menuList = [];
-                    if (config.allRoutes) menuList = allRoutes
-                    else menuList = res.privateRoutes
-                    if (config.env === "production") menuList = menuList
-                    // 是否使用本地路由(结束)
+                    let menuList = res.privateRoutes
+                    if (config.allRoutes && config.env !== "production") menuList = allRoutes
+
+                    // 排序
                     this.menuList = menuSort(getMenuList(menuList, routeName))
                     resolve(this.menuList);
                 }).catch(err => {
