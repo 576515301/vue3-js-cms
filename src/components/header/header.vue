@@ -4,16 +4,12 @@
         <div class="user">
             <el-dropdown @command="handleCommand">
                 <span class="el-dropdown-link">
-                    Dropdown List
+                    sslc
                     <el-icon class="el-icon--right"><arrow-down /></el-icon>
                 </span>
                 <template #dropdown>
                     <el-dropdown-menu>
-                        <el-dropdown-item command="a">Action 1</el-dropdown-item>
-                        <el-dropdown-item command="b">Action 2</el-dropdown-item>
-                        <el-dropdown-item command="c">Action 3</el-dropdown-item>
-                        <el-dropdown-item command="d" disabled>Action 4</el-dropdown-item>
-                        <el-dropdown-item command="e" divided>Action 5</el-dropdown-item>
+                        <el-dropdown-item command="exit">退出登录</el-dropdown-item>
                     </el-dropdown-menu>
                 </template>
             </el-dropdown>
@@ -22,11 +18,19 @@
 </template>
 
 <script setup>
-import { ElMessage } from 'element-plus'
+import storage from "@utils/storage";
+import Router from "@router/router";
 import Bread from '@components/bread/bread.vue'
 
+const commandFunc = {
+    exit: (type) => {
+        storage.clear();
+        Router.replace("/login");
+    }
+}
+
 const handleCommand = type => {
-    ElMessage.success(type)
+    commandFunc[type](type);
 }
 
 </script>

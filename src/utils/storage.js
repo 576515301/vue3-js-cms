@@ -14,8 +14,8 @@ export default {
         delete storage[key];
         this.setStorage(storage);
     },
-    claerAll() {
-        localStorage.claerAll();
+    clear() {
+        localStorage.clear();
     },
     setStorage(val) {
         window.localStorage.setItem(config.nameSpace, JSON.stringify(val))

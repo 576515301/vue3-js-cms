@@ -31,7 +31,7 @@ export const allRoutes = [
         meta: {
             title: "成员管理",
             icon: "User",
-            index: 2
+            index: 1
         },
         children: [{
             path: "/staffList",
@@ -68,7 +68,7 @@ export const allRoutes = [
         meta: {
             title: "仪表盘",
             icon: "Stopwatch",
-            index: 1
+            index: 2
         }
     },
     {
