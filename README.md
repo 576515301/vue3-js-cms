@@ -1,5 +1,5 @@
 # 项目介绍
-  基于vue3 + element-plus + j s+ vue-router + axios + pinia开发的cms后台管理系统模板
+  基于vue3 + element-plus + j s+ vue-router + axios + pinia开发的cms后台管理系统模板（更新ing）
 >## 已实现功能
   1. axios请求封装。 
   2. 动态路由权限。
