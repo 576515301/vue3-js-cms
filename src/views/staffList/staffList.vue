@@ -89,8 +89,8 @@ const tableSetting = reactive({
             key: "action",
             label: "操作",
             custom: "action",  // action(默认自定义样式有修改和删除两个按钮) || custom(完全自定义)
-            revise: true, // 当action==='action'时生效，值为修改此条数据的api方法
-            del: true, // 当action==='action'时生效，值为删除此条数据的api方法
+            revise: true, // 当action==='action'时生效，是否显示修改按钮
+            del: true, // 当action==='action'时生效，是否显示删除按钮
 
         }
     ],
@@ -129,8 +129,8 @@ const tableSetting = reactive({
 //         }
 //     ],
 //     handleRevise: reviseStaff, // 当custom==='action'时生效，值为修改此条数据的api方法
-//     handleDel: delStaff, // 当action==='action'时生效，值为删除此条数据的api方法
-//     isCheckbox:true,        // 这个table的每一行元素是否显示多选框，一般放在header第一个元素中，且不需要其他属性
+//     handleDel: delStaff,        // 当action==='action'时生效，值为删除此条数据的api方法
+//     isCheckbox:true,            // 这个table的每一行元素是否显示多选框，一般放在header第一个元素中，且不需要其他属性
 // }
 </script>
 

@@ -27,6 +27,7 @@ export const allRoutes = [
     {
         path: "/staff",
         name: "staff",
+        redirect:"/staffList",
         meta: {
             title: "成员管理",
             icon: "User",

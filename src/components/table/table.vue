@@ -148,10 +148,10 @@ const state = reactive({
 
     },
     pagination: {
-        currentPage: "",
-        pageSize: ""
+        currentPage: 1,
+        pageSize: 10
     },
-    total: "",
+    total: 0,
     tableList: [],
     getLoading: false,
     delLoading: false,
