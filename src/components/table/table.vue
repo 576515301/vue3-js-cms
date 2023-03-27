@@ -163,6 +163,7 @@ const state = reactive({
 const handleRevise = (scope) => {
     state.reviseDialog.title = scope ? "修改成员" : "添加";
     state.reviseDialog.show = true;
+    state.reviseDialog.newItem = {}
     if (scope) {
         state.reviseDialog.newItem = cloneDeep(scope.row)
     }
@@ -170,7 +171,6 @@ const handleRevise = (scope) => {
         state.reviseLoading = true;
         tableSetting.funcAddItem(state.reviseDialog.newItem).then(res => {
             renewItem(state.reviseDialog.newItem)
-            state.reviseDialog.newItem = {}
             state.reviseDialog.show = false;
             state.reviseLoading = false;
             ElMessage.success("成功");
