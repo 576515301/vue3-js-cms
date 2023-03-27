@@ -15,6 +15,7 @@
                         @click="handleLogin(ruleFormRef)">登录</el-button>
                 </el-form-item>
             </el-form>
+            <div style="text-align: center; color:#595959;">账号密码随意</div>
         </div>
     </div>
 </template>
